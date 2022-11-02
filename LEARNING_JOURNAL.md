@@ -1,6 +1,6 @@
-#LEARNING JOURNAL
+# LEARNING JOURNAL
 
-###TASK ONE-TURRET
+### TASK ONE-TURRET
 
 PROBLEM:
 I did not know how to get the turret object to rotate in the direction of the player. I knew it was to do with transform, however, I did not know what rotation function was needed.
@@ -74,7 +74,7 @@ I created an if statement and 2 float variables to check the fire rate and the t
 
 
 
-###TASK TWO- AREA COUNTDOWN
+### TASK TWO- AREA COUNTDOWN
 
 PROBLEM:
 I had created a countdown timer by using TMPro and made it subtract by using time.deltaTime when it was more than 0. However, I did not know how to convert the float variable of the countdown to a string. 
@@ -93,7 +93,7 @@ SOLUTION:
 The timer script was attached to the UI canvas from back when I was trying to make the timer work. I moved the script over to the player cube so that the ‘OnTriggerEnter’ method knew what needed to trigger the collider.
 
 
-###TASK THREE- ENLARGE PLAYER PICKUP 
+### TASK THREE- ENLARGE PLAYER PICKUP 
 
 PROBLEM:
 I created a pickup script so that when the player collides with the pickup object, the pickup disappears. When tested, the pickup would fall from the sky like desired, however, when it would collide with the plane, the plane collider triggered the collision and destroyed the pickup. 
