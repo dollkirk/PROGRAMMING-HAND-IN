@@ -63,6 +63,8 @@ After the Start function, create a new function called OnTriggerEnter. In this f
 
 go back to the Unity editor and create a cube the size of the 2nd plane area. Place this above the plane and turn off the mesh renderer so that it is invisible. Click the IsTrigger box on this invisible object. This makes the box collider on this invisible object the collider referenced in the script.
 
+![Screenshot 2022-11-04 210257](https://user-images.githubusercontent.com/114989045/200074307-b735e027-8a60-4f9d-9396-c3814f47d5a9.png)
+
 This means that when the player object collides with this invisible object, the timer is reset back to 60 and counts down again.
 
-![Screenshot 2022-11-04 210257](https://user-images.githubusercontent.com/114989045/200074307-b735e027-8a60-4f9d-9396-c3814f47d5a9.png)
+
