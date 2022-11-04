@@ -44,4 +44,25 @@ Next, drag this TMP object to the variable space where the Timer script is in th
 
 ![Screenshot 2022-11-04 203942](https://user-images.githubusercontent.com/114989045/200070658-5fb387ce-37de-4f0d-a5ad-5dd9b25715c9.png)
 
-Now that the UI is created, we need to make the timer count down from 60 seconds. 
+Now that the UI is created, we need to make the timer count down from 60 seconds.
+
+In the Update function, create an if statement to check if the variable timeCountDown is more than 0. If it is more than 0, then timeCountDown should decrement by Time, as shown below.
+
+![Screenshot 2022-11-04 205009](https://user-images.githubusercontent.com/114989045/200072374-9655bec9-7b60-42e6-8232-07c538d2bec1.png)
+
+We now need to convert this float value of timeCountDown to a string to then assign it to countText as countText will then display is in the TMP object.
+
+This is done by the line string.Format("{0:n0}",timeCountDown). This gets the rounding value that we want to round the float by, and the float we are getting (timeCountDown).
+
+Lastly, we want the timer to reset whenm entering a new area.
+
+After the Start function, create a new function called OnTriggerEnter. In this function, set the variable timeCountDown as the value 60.
+
+![Screenshot 2022-11-04 210212](https://user-images.githubusercontent.com/114989045/200074383-b0b2598d-37cb-4ba2-a357-6e699f424f99.png)
+
+
+go back to the Unity editor and create a cube the size of the 2nd plane area. Place this above the plane and turn off the mesh renderer so that it is invisible. Click the IsTrigger box on this invisible object. This makes the box collider on this invisible object the collider referenced in the script.
+
+This means that when the player object collides with this invisible object, the timer is reset back to 60 and counts down again.
+
+![Screenshot 2022-11-04 210257](https://user-images.githubusercontent.com/114989045/200074307-b735e027-8a60-4f9d-9396-c3814f47d5a9.png)
