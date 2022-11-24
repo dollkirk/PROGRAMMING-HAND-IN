@@ -48,5 +48,10 @@ We also have to create an if statement to say when the door is not open. This is
 
 ![Screenshot 2022-11-24 214550](https://user-images.githubusercontent.com/114989045/203866814-6fcedf6d-288a-4191-a92d-31d68ec41ca8.png)
 
+Now in the Unity Editor, we have to drag the game objects that we created for the open and close positions into the public Transform variable slots for "doorOpenPos" and "doorClosePos".
+
+![Screenshot 2022-11-24 214839](https://user-images.githubusercontent.com/114989045/203867151-18b607b9-0fac-4e8a-a48f-8ac8733cbe4f.png)
+
+
 
 #### USING RIGIDBODY:
