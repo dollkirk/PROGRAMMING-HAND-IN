@@ -3,7 +3,7 @@
 
 #### PLAYER CONTROLLER:
 
-Create a player object and 2 planes.
+Create a player object and a plane.
 
 Then, create a C# script called PlayerController and attach it to the player object.
 
@@ -23,3 +23,22 @@ I have also put in a jump input shown below, however, you do not need this for t
 
 ![Screenshot 2022-11-04 201102](https://user-images.githubusercontent.com/114989045/200065804-820af291-4bf4-46c4-be8b-e0d32bc192ef.png)
 
+#### USING TRANSFORM:
+
+Create 2 diferent coloured game objects and attach rigidbody components to both so that the player object can move them around. These will be the key objects that will be placed on the corresponding pressure plates.
+
+Also create 2 thin game objects placed on the plane. These will be the pressure plates that will be interacted with to open doors. To not confuse things, set the colours of these pressure plates to match the colours of the key game objects.
+
+Create 2 more gameobjects that will be the doors that open when the key object is placed ontop of the pressure plate object.
+
+![Screenshot 2022-11-24 211543](https://user-images.githubusercontent.com/114989045/203864018-7cb6d907-68c5-4d89-b2f6-0b54d8722ed6.png)
+
+Lastly, as shown in the image above, create duplicates of these doors, switch off the mesh and colliders for these objects, and name one "DoorOpenPos" and the other "DoorClosePos" for both doors. These will be the positions of the doors when opened and closed.
+
+Now, create a C# script called "DoorController" and attach this script to both doors. In this script create a public bool variable called openDoor and set it to false as the door should not be open to start with. 
+
+Create 2 more public variables which will be Transform variables. This means that the variable is using the transforms (position, rotation, etc.) of the selected game object. Name these 2 Transform variables "doorOpenPos" and "doorClosePos". 
+
+In the Update function, create an if statement to check if openDoor is equal to true. If it is, 
+
+#### USING RIGIDBODY:
