@@ -35,10 +35,18 @@ Create 2 more gameobjects that will be the doors that open when the key object i
 
 Lastly, as shown in the image above, create duplicates of these doors, switch off the mesh and colliders for these objects, and name one "DoorOpenPos" and the other "DoorClosePos" for both doors. These will be the positions of the doors when opened and closed.
 
-Now, create a C# script called "DoorController" and attach this script to both doors. In this script create a public bool variable called openDoor and set it to false as the door should not be open to start with. 
+Now, create a C# script called "DoorController" and attach this script to both doors. In this script create a public bool variable called "openDoor" and set it to false as the door should not be open to start with. 
 
 Create 2 more public variables which will be Transform variables. This means that the variable is using the transforms (position, rotation, etc.) of the selected game object. Name these 2 Transform variables "doorOpenPos" and "doorClosePos". 
 
-In the Update function, create an if statement to check if openDoor is equal to true. If it is, 
+In the Update function, create an if statement to check if "openDoor" is equal to true. If it is, then we are going to move the door that this script is attached to, to where the "doorOpenPos" object position is. We can do this by using transform.position as shown below.
+
+
+![Screenshot 2022-11-24 214149](https://user-images.githubusercontent.com/114989045/203866472-e9430924-3bc8-48e6-b0f8-6ff71b720458.png)
+
+We also have to create an if statement to say when the door is not open. This is essentially the same if statement as before, however, it is checking if "doorOpen" is equal to false and setting the position of the door to the same as "doorClosePos".
+
+![Screenshot 2022-11-24 214550](https://user-images.githubusercontent.com/114989045/203866814-6fcedf6d-288a-4191-a92d-31d68ec41ca8.png)
+
 
 #### USING RIGIDBODY:
