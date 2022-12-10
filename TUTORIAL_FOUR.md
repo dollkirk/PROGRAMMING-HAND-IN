@@ -79,11 +79,15 @@ Now in the Unity Editor, we have to drag the game objects that we created for th
 
 To trigger this transform of opening the door to doorOpenPos, create a new C# script called PressurePlateTrigger and attach it to the pressure plate. 
 
-Create 2  public variables, one that is referencing the DoorController script we created earlier with the transforms called DoorControllerScript, and one that is a boolean called cubeDoor set to false.
+Create 2  public variables, one that is referencing the DoorController script we created earlier with the transforms called DoorControllerScript, and one that is a boolean called Door set to false.
+
+![Screenshot 2022-12-10 195514](https://user-images.githubusercontent.com/114989045/206873086-f33a1af5-4885-497e-8582-a1a675a4895b.png)
 
 Create a new function called OntriggerEnter. This means that if the Key object collides with the desired collider, the following actions will happen that are in this function. 
 
 in this function, create an if statement to check if the Key object is colliding with the correct collider. We can do this by comparing the tag of the collider object as shown below.
+
+![Screenshot 2022-12-10 195553](https://user-images.githubusercontent.com/114989045/206873094-d5693ca9-2a83-4cdc-aa2f-4c765e3cc6cb.png)
 
 To make this CompareTag fucntion work, we have to go back into the Unity editor and create a new tag called "PressurePlate" and assign the pressure plate objects to this tag.
 
