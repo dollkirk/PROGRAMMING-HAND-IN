@@ -33,7 +33,7 @@ Create 2 more gameobjects that will be the doors that open when the key object i
 
 Now, create a C# script called "DoorController" and attach this script to both Key objects. In this script create a public bool variable called "DoorOpen" and set it to false as the door should not be open to start with. Also, create a public GameObject variable called door and drag the door object into this variable assignment in the Unity editor. Finally, creat one last public variable called doorSpeed and set it as a float.
 
-Now, create a new function called OnTriggerStay. This means that if the Key object collides with the desire collider and stays, the following actions will happen that are in this function. 
+Now, create a new function called OnTriggerStay. This means that if the Key object collides with the desired collider and stays, the following actions will happen that are in this function. 
 
 In this function, create an if statement to check if the variable doorOpen is equals to false. If it is, we need to create another if statement to check if the Key object is colliding with the correct collider. We can do this by comparing the tag of the collider object as shown below.
 
@@ -69,7 +69,7 @@ In the Update function, create an if statement to check if "openDoor" is equal t
 
 ![Screenshot 2022-11-24 214149](https://user-images.githubusercontent.com/114989045/203866472-e9430924-3bc8-48e6-b0f8-6ff71b720458.png)
 
-We also have to create an if statement to say when the door is not open. This is essentially the same if statement as before, however, it is checking if "doorOpen" is equal to false and setting the position of the door to the same as "doorClosePos".
+We also have to create an if statement to say when the door is not open. This is essentially the same if statement as before, however, it is checking if "openDoor" is equal to false and setting the position of the door to the same as "doorClosePos".
 
 ![Screenshot 2022-11-24 214550](https://user-images.githubusercontent.com/114989045/203866814-6fcedf6d-288a-4191-a92d-31d68ec41ca8.png)
 
@@ -77,6 +77,20 @@ Now in the Unity Editor, we have to drag the game objects that we created for th
 
 ![Screenshot 2022-11-24 214839](https://user-images.githubusercontent.com/114989045/203867151-18b607b9-0fac-4e8a-a48f-8ac8733cbe4f.png)
 
-#### TEMPORARY KEY:
+To trigger this transform of opening the door to doorOpenPos, create a new C# script called PressurePlateTrigger and attach it to the pressure plate. 
 
-To add to this pressure plate door, we can make the door open for a set time when the key is placed on the plate and then close after that set time. We can also 
+Create 2  public variables, one that is referencing the DoorController script we created earlier with the transforms called DoorControllerScript, and one that is a boolean called cubeDoor set to false.
+
+Create a new function called OntriggerEnter. This means that if the Key object collides with the desired collider, the following actions will happen that are in this function. 
+
+in this function, create an if statement to check if the Key object is colliding with the correct collider. We can do this by comparing the tag of the collider object as shown below.
+
+To make this CompareTag fucntion work, we have to go back into the Unity editor and create a new tag called "PressurePlate" and assign the pressure plate objects to this tag.
+
+If it is the correct tag of "PressurePlate", the variable 
+
+#### TEMPORARY OPEN KEY:
+
+To add to this pressure plate door, we can make the door open for a set time when the key is placed on the plate and then close after that set time. 
+
+To do this, we can use the 
