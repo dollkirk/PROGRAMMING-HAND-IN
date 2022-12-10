@@ -55,3 +55,26 @@ Now in the Unity Editor, we have to drag the game objects that we created for th
 
 
 #### USING RIGIDBODY:
+
+Create 2 diferent coloured game objects and attach rigidbody components to both so that the player object can move them around. These will be the key objects that will be placed on the corresponding pressure plates.
+
+Also create 2 thin game objects placed on the plane. These will be the pressure plates that will be interacted with to open doors. To not confuse things, set the colours of these pressure plates to match the colours of the key game objects.
+
+Create 2 more gameobjects that will be the doors that open when the key object is placed ontop of the pressure plate object. Attach rigidbody components to both of these doors as well.
+
+Now, create a C# script called "DoorController" and attach this script to both Key objects. In this script create a public bool variable called "DoorOpen" and set it to false as the door should not be open to start with. Also, create a public GameObject variable called door and drag the door object into this variable assignment in the Unity editor. Finally, creat one last public variable called doorSpeed and set it as a float.
+
+Now, create a new function called OnTriggerStay. This means that if the Key object collides with the desire collider and stays, the following actions will happen that are in this function. 
+
+In this function, create an if statement to check if the variable doorOpen is equals to false. If it is, we need to create another if statement to check if the Key object is colliding with the correct collider. We can do this by comparing the tag of the collider object as shown below.
+
+![Screenshot 2022-12-10 171003](https://user-images.githubusercontent.com/114989045/206866930-52e94e16-0fd2-433b-8be8-25f9824df1c5.png)
+
+To make this CompareTag fucntion work, we have to go back into the Unity editor and create a new tag called "PressurePlate" and assign the pressure plate objects to this tag.
+
+In the if statement, we want to finally open the door after all of these checks. We can do this by getting the rigidbody component on the door and adding a force to it.
+
+![Screenshot 2022-12-10 171019](https://user-images.githubusercontent.com/114989045/206866936-63e5bac8-3634-4de9-af4e-a5f21927d4e7.png)
+
+As shown above, we can put a direction of force and a speed in that direction, and a type of force, e.g. a continuous force or impulsive force.
+
