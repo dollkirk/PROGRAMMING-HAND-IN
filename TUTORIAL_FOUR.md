@@ -79,9 +79,7 @@ Now in the Unity Editor, we have to drag the game objects that we created for th
 
 To trigger this transform of opening the door to doorOpenPos, create a new C# script called PressurePlateTrigger and attach it to the pressure plate. 
 
-Create 2  public variables, one that is referencing the DoorController script we created earlier with the transforms called DoorControllerScript, and one that is a boolean called Door set to false.
-
-![Screenshot 2022-12-10 195514](https://user-images.githubusercontent.com/114989045/206873086-f33a1af5-4885-497e-8582-a1a675a4895b.png)
+Create a public variable that is referencing the DoorController script we created earlier with the transforms called DoorControllerScript.
 
 Create a new function called OntriggerEnter. This means that if the Key object collides with the desired collider, the following actions will happen that are in this function. 
 
@@ -91,7 +89,13 @@ in this function, create an if statement to check if the Key object is colliding
 
 To make this CompareTag fucntion work, we have to go back into the Unity editor and create a new tag called "PressurePlate" and assign the pressure plate objects to this tag.
 
-If it is the correct tag of "PressurePlate", the variable 
+If it is the correct tag of "PressurePlate", the variable DoorControllerScript will pull the boolean variable DoorOpen from the DoorController script and set it as equal to true.
+
+Now, we need to create another function quite similar called OnTriggerExit. This function means that when the Key object leaves the collision, the following in the function will happen.
+
+In this function, create an if statement to check if the object exiting the collision has got the tag "PressurePlate". If it has, the variable DoorControllerScript will pull the boolean variable DoorOpen from the DoorController script and set it as equal to false.
+
+
 
 #### TEMPORARY OPEN KEY:
 
