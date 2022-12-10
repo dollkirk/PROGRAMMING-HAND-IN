@@ -77,13 +77,13 @@ Now in the Unity Editor, we have to drag the game objects that we created for th
 
 ![Screenshot 2022-11-24 214839](https://user-images.githubusercontent.com/114989045/203867151-18b607b9-0fac-4e8a-a48f-8ac8733cbe4f.png)
 
-To trigger this transform of opening the door to doorOpenPos, create a new C# script called PressurePlateTrigger and attach it to the pressure plate. 
+To trigger this transform of opening the door to doorOpenPos, create a new C# script called PressurePlateTrigger and attach it to both pressure plates. 
 
 Create a public variable that is referencing the DoorController script we created earlier with the transforms called DoorControllerScript.
 
-Create a new function called OntriggerEnter. This means that if the Key object collides with the desired collider, the following actions will happen that are in this function. 
+Create a new function called OntriggerEnter. This means that if the Key objects collides with the desired colliders, the following actions will happen that are in this function. 
 
-in this function, create an if statement to check if the Key object is colliding with the correct collider. We can do this by comparing the tag of the collider object as shown below.
+in this function, create an if statement to check if the Key objects are colliding with the correct colliders. We can do this by comparing the tag of the collider objects as shown below.
 
 ![Screenshot 2022-12-10 202302](https://user-images.githubusercontent.com/114989045/206873983-da777826-d029-4bb6-88e7-91149a892117.png)
 
@@ -91,9 +91,9 @@ To make this CompareTag fucntion work, we have to go back into the Unity editor 
 
 If it is the correct tag of "PressurePlate", the variable DoorControllerScript will pull the boolean variable DoorOpen from the DoorController script and set it as equal to true.
 
-Now, we need to create another function quite similar called OnTriggerExit. This function means that when the Key object leaves the collision, the following in the function will happen.
+Now, we need to create another function quite similar called OnTriggerExit. This function means that when the Key objects leaves the collisions, the following in the function will happen.
 
-In this function, create an if statement to check if the object exiting the collision has got the tag "PressurePlate". If it has, the variable DoorControllerScript will pull the boolean variable DoorOpen from the DoorController script and set it as equal to false.
+In this function, create an if statement to check if the objects exiting the collisions has got the tag "PressurePlate". If it has, the variable DoorControllerScript will pull the boolean variable DoorOpen from the DoorController script and set it as equal to false.
 
 ![Screenshot 2022-12-10 202313](https://user-images.githubusercontent.com/114989045/206873985-cbcd70cc-989d-49d4-86f3-ad9c0285d02d.png)
 
@@ -102,4 +102,15 @@ In this function, create an if statement to check if the object exiting the coll
 
 To add to this pressure plate door, we can make the door open for a set time when the key is placed on the plate and then close after that set time. 
 
-To do this, we can use the 
+To do this, we can use the two scripts we created previously for moving the doors using transforms: PressurePlateTrigger script and DoorController script.
+
+Open up the DoorController script and create 2 more variables, one public float called timeRemaining and one public boolean called timerIsRunning. Set the value of timeRemaining to 5f.
+
+![Screenshot 2022-12-10 203649](https://user-images.githubusercontent.com/114989045/206874395-0d1b96d2-1e90-424c-b97f-66ee98fa71f9.png)
+
+Create a new function called StartTimer and inside this function, create an if statement to check if timeRemaining is more than 0. It will be as the timeRemaining is set to 5f, therefore, the door can be opened. 
+
+We can move the line of code shown below in the Update function to this if statement we have just created like so:
+
+We also need to start counting down when the door opens. This is done by subtracting Time.deltatime from timeRemaining.
+
