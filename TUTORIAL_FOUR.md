@@ -85,7 +85,7 @@ Create a new function called OntriggerEnter. This means that if the Key object c
 
 in this function, create an if statement to check if the Key object is colliding with the correct collider. We can do this by comparing the tag of the collider object as shown below.
 
-![Screenshot 2022-12-10 195553](https://user-images.githubusercontent.com/114989045/206873094-d5693ca9-2a83-4cdc-aa2f-4c765e3cc6cb.png)
+![Screenshot 2022-12-10 202302](https://user-images.githubusercontent.com/114989045/206873983-da777826-d029-4bb6-88e7-91149a892117.png)
 
 To make this CompareTag fucntion work, we have to go back into the Unity editor and create a new tag called "PressurePlate" and assign the pressure plate objects to this tag.
 
@@ -95,6 +95,7 @@ Now, we need to create another function quite similar called OnTriggerExit. This
 
 In this function, create an if statement to check if the object exiting the collision has got the tag "PressurePlate". If it has, the variable DoorControllerScript will pull the boolean variable DoorOpen from the DoorController script and set it as equal to false.
 
+![Screenshot 2022-12-10 202313](https://user-images.githubusercontent.com/114989045/206873985-cbcd70cc-989d-49d4-86f3-ad9c0285d02d.png)
 
 
 #### TEMPORARY OPEN KEY:
