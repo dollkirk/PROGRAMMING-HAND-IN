@@ -122,11 +122,13 @@ I was using ForceMode.Impulse, when Ishould've been using ForceMode.Force as Imp
 ![Screenshot 2022-12-11 214202](https://user-images.githubusercontent.com/114989045/206930447-22cfdfad-25e8-4bbe-8e32-9dd8ffe83a9e.png)
 
 **PROBLEM:**
-
+I edited my scripts of moving the door using transforms to make a countdown. I wanted the countdown to start when the door is triggered to open and I want the door to shut back when the countdown reaches 0. I created a function called StartTimer and tested if it worked in Unity. I could see that the timer value was starting at the number i gave it (5) and then counting down the seconds when the door opens. It also shut the door when the timer reached 0. However, when the trigger is deactivated, and reactivated again, the door does not open again.
 
 
 **SOLUTION:**
+I realised that I had to reset the timer back to what it was set to. Therefore, I reassigned the variable timeRemaining which was countingdown back to its original given number. I put this into the if statement checking if the timer has run out just after the door moving to the close position.
 
+![Screenshot 2022-12-11 220457](https://user-images.githubusercontent.com/114989045/206931599-30dbb06d-5460-4f07-9016-ac2131349d42.png)
 
 ### COMPONENT PACKAGE
 
