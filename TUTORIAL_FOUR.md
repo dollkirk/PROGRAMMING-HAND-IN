@@ -114,3 +114,8 @@ We can move the line of code shown below in the Update function to this if state
 
 We also need to start counting down when the door opens. This is done by subtracting Time.deltatime from timeRemaining.
 
+If the variable timeRemaining is not more than 0, than we need to set the timerIsRunning variable to false. we also need to move the position of the door back to the close position as shown below:
+
+![Screenshot 2022-12-11 200215](https://user-images.githubusercontent.com/114989045/206926103-bc882289-e86d-4864-9886-dfa5c97ef8ae.png)
+
+Now, we need to reset the timer back to the 5f value as when the key object is moved off the pressure plate, the timer needs to reset, otherwise, it cannot open again.
