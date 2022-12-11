@@ -111,6 +111,11 @@ I asked a peer to help, and they showed me how to reference a script in another 
 
 ### TASK FOUR- PRESSURE PLATES
 
+**PROBLEM:**
+I created a script to 
+
+
+**SOLUTION:**
 
 
 ### COMPONENT PACKAGE
@@ -156,8 +161,9 @@ In the Timer script which is on the player object, I removed all of the variable
 
 In the Start function, I need to find the script to find out how many turrets are in the scene so I used "AddRange" to add those found and to find the turret objects, I used "FindObjectsOfType<TurretOn>()". This finds all the objects referencing the "TurretOn" script and adds them to the list on play.
 
-![Capture](https://user-images.githubusercontent.com/114989045/204538748-841bf1a4-addd-4b91-8132-6cf81e32e7ff.PNG)
+  ![Capture](https://user-images.githubusercontent.com/114989045/204538748-841bf1a4-addd-4b91-8132-6cf81e32e7ff.PNG)
 
+  
   
 
 
