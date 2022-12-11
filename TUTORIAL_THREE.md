@@ -24,5 +24,10 @@ I have also put in a jump input shown below, however, you do not need this for t
 ![Screenshot 2022-11-04 201102](https://user-images.githubusercontent.com/114989045/200065804-820af291-4bf4-46c4-be8b-e0d32bc192ef.png)
 
 
-#### 
+#### INCREASE SIZE
+
+Create an empty object called controller, and attach a script to it called PlayerSizeController. 
+
+Now create 2 public variables, one that is a GameObject called PlayerPicked that will be the player object, and one that is a boolean called timerIsRunning.
+
 
