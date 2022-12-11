@@ -112,7 +112,17 @@ I asked a peer to help, and they showed me how to reference a script in another 
 ### TASK FOUR- PRESSURE PLATES
 
 **PROBLEM:**
-I created a script to 
+I created a script to move a door open when a collision is triggered. I wanted the door to open and stay open using a force on the rigidbody of the door. I used GetComponent Rigidbody to access the door's rigidbody and then applied an upward force using AddRelativeForce. However, the door wound only jump open, and not stay open.
+
+![Screenshot 2022-12-11 214123](https://user-images.githubusercontent.com/114989045/206930421-aa670582-29ae-4ebf-ba17-7ca27b7bc836.png)
+
+**SOLUTION:**
+I was using ForceMode.Impulse, when Ishould've been using ForceMode.Force as Impulse only applies the force for a small amount of time, where as Force applies it constantly. I also placed a cube near to where I wanted the door to stop opening as otherwise, the door would constantly lift up into the air. This acted as a door stop.
+
+![Screenshot 2022-12-11 214202](https://user-images.githubusercontent.com/114989045/206930447-22cfdfad-25e8-4bbe-8e32-9dd8ffe83a9e.png)
+
+**PROBLEM:**
+
 
 
 **SOLUTION:**
@@ -161,7 +171,7 @@ In the Timer script which is on the player object, I removed all of the variable
 
 In the Start function, I need to find the script to find out how many turrets are in the scene so I used "AddRange" to add those found and to find the turret objects, I used "FindObjectsOfType<TurretOn>()". This finds all the objects referencing the "TurretOn" script and adds them to the list on play.
 
-  ![Capture](https://user-images.githubusercontent.com/114989045/204538748-841bf1a4-addd-4b91-8132-6cf81e32e7ff.PNG)
+![Capture](https://user-images.githubusercontent.com/114989045/204538748-841bf1a4-addd-4b91-8132-6cf81e32e7ff.PNG)
 
   
   
