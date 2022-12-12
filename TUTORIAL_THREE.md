@@ -24,7 +24,7 @@ I have also put in a jump input shown below, however, you do not need this for t
 ![Screenshot 2022-11-04 201102](https://user-images.githubusercontent.com/114989045/200065804-820af291-4bf4-46c4-be8b-e0d32bc192ef.png)
 
 
-#### INCREASE SIZE
+#### INCREASE SIZE:
 
 Create an empty object called controller, and attach a script to it called PlayerSizeController. 
 
